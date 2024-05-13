@@ -12,8 +12,8 @@ import {
 function App() {
   return (
     <>
-      <Clock></Clock>
-      <ClockDisplay></ClockDisplay>
+      {/* <Clock></Clock>
+      <ClockDisplay></ClockDisplay> */}
       <ActivityFinder></ActivityFinder>
       <BitcoinRates></BitcoinRates>
     </>
