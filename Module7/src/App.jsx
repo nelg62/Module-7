@@ -7,6 +7,8 @@ import {
   BitcoinRates,
   Clock,
   ClockDisplay,
+  RefCounter,
+  VideoPlayer,
 } from "./Components";
 
 function App() {
@@ -14,8 +16,10 @@ function App() {
     <>
       {/* <Clock></Clock>
       <ClockDisplay></ClockDisplay> */}
-      <ActivityFinder></ActivityFinder>
-      <BitcoinRates></BitcoinRates>
+      {/* <ActivityFinder></ActivityFinder>
+      <BitcoinRates></BitcoinRates> */}
+      <RefCounter></RefCounter>
+      <VideoPlayer></VideoPlayer>
     </>
   );
 }
