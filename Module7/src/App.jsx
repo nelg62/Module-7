@@ -19,13 +19,13 @@ function App() {
     <>
       {/* <Clock></Clock>
       <ClockDisplay></ClockDisplay> */}
-      {/* <ActivityFinder></ActivityFinder> */}
+      <ActivityFinder></ActivityFinder>
       {/* <BitcoinRates></BitcoinRates> */}
       {/* <RefCounter></RefCounter>
       <VideoPlayer></VideoPlayer> */}
       {/* <ReducerCounter></ReducerCounter> */}
       {/* <PostListReducer></PostListReducer> */}
-      <SubscribeForm></SubscribeForm>
+      {/* <SubscribeForm></SubscribeForm> */}
     </>
   );
 }

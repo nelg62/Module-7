@@ -1,28 +1,32 @@
 import { useState } from "react";
+import { useFormInput } from "../hooks/useFormInput";
 
 export default function SubscribeForm() {
   const [status, setStatus] = useState("");
-  // similar state variables mapped to form inputs
-  const [firstName, setFirstName] = useState("Mary");
-  const [email, setEmail] = useState("mary@poppins.com");
-  // similar handler functions
-  const handleNameChange = (e) => setFirstName(e.target.value);
-  const handleEmailChange = (e) => setEmail(e.target.value);
+
+  // use our custom hook instead of useState directly
+  const [firstNameInputProps, resetFirstName] = useFormInput("Mary");
+  const [lastNameInputProps, resetLastName] = useFormInput("steve");
+  const [emailInputProps, resetEmail] = useFormInput("mary@pop.com");
   function handleSubscribe() {
-    setFirstName("");
-    setEmail("");
+    resetFirstName();
+    resetLastName();
+    resetEmail();
     setStatus("Thanks for subscribing!");
   }
+
   return (
     <div className="SubscribeForm componentBox">
       <label>
-        First name: {/* form inputs with similar props */}
-        <input value={firstName} onChange={handleNameChange} />
+        First name: <input {...firstNameInputProps} />
       </label>
       <label>
-        Email: {/* form inputs with similar props */}
-        <input value={email} onChange={handleEmailChange} />
+        Last name: <input {...lastNameInputProps} />
       </label>
+      <label>
+        Email: <input {...emailInputProps} />
+      </label>
+
       <button onClick={handleSubscribe}>Subscribe</button>
       <div>{status}</div>
     </div>
