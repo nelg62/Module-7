@@ -7,7 +7,10 @@ import {
   BitcoinRates,
   Clock,
   ClockDisplay,
+  PostListReducer,
+  ReducerCounter,
   RefCounter,
+  SubscribeForm,
   VideoPlayer,
 } from "./Components";
 
@@ -16,10 +19,13 @@ function App() {
     <>
       {/* <Clock></Clock>
       <ClockDisplay></ClockDisplay> */}
-      {/* <ActivityFinder></ActivityFinder>
-      <BitcoinRates></BitcoinRates> */}
-      <RefCounter></RefCounter>
-      <VideoPlayer></VideoPlayer>
+      {/* <ActivityFinder></ActivityFinder> */}
+      {/* <BitcoinRates></BitcoinRates> */}
+      {/* <RefCounter></RefCounter>
+      <VideoPlayer></VideoPlayer> */}
+      {/* <ReducerCounter></ReducerCounter> */}
+      {/* <PostListReducer></PostListReducer> */}
+      <SubscribeForm></SubscribeForm>
     </>
   );
 }
