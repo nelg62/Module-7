@@ -1,31 +1,8 @@
-import { useState } from "react";
+import React from "react";
+import { useEmoji } from "../context/EmojiContext";
 
 function Emoji() {
-  const [mood, setEmojiMood] = useState("🙂");
-
-  const happy = () => {
-    let newMood = "🙂";
-    if (mood === "🙂") newMood = "😄";
-    else if (mood === "😄") newMood = "😁";
-
-    setEmojiMood(newMood);
-  };
-
-  const somethingFunny = () => {
-    let newMood = "😆";
-    if (mood === "😆") newMood = "😂";
-    else if (mood === "😂") newMood = "🤣";
-
-    setEmojiMood(newMood);
-  };
-
-  const angry = () => {
-    let newMood = "😠";
-    if (mood === "😠") newMood = "😡";
-    else if (mood === "😡") newMood = "🤬";
-
-    setEmojiMood(newMood);
-  };
+  const { mood, happy, somethingFunny, angry, setEmojiMood } = useEmoji();
 
   return (
     <div className="Emoji">

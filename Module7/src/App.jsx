@@ -16,6 +16,8 @@ import {
 } from "./Components";
 import { UserProvider } from "./context/UserContext";
 import MyThemeProvider from "./context/ThemeContext";
+import { EmojiProvider } from "./context/EmojiContext";
+import Emoji from "./Components/Emoji";
 
 // Modify App.jsx to include the UserProvider component
 function App() {
@@ -23,13 +25,17 @@ function App() {
     <>
       <UserProvider>
         <MyThemeProvider>
-          {/* provider component is at top level */}
-          <ClockDisplay /> {/* so all children can use context data */}
-          {/* <MoviesList /> even if they have children of their own */}
-          <ActivityFinder />
-          <PostListReducer />
-          {/* logging in here can now set up current user everywhere */}
-          <LoginForm />
+          <EmojiProvider>
+            {/* provider component is at top level */}
+            <ClockDisplay /> {/* so all children can use context data */}
+            {/* <MoviesList /> even if they have children of their own */}
+            <ActivityFinder />
+            <PostListReducer />
+            {/* logging in here can now set up current user everywhere */}
+            <LoginForm />
+            <Emoji />
+            <BitcoinRates></BitcoinRates>
+          </EmojiProvider>
         </MyThemeProvider>
       </UserProvider>
     </>
