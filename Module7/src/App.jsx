@@ -7,25 +7,31 @@ import {
   BitcoinRates,
   Clock,
   ClockDisplay,
+  LoginForm,
   PostListReducer,
   ReducerCounter,
   RefCounter,
   SubscribeForm,
   VideoPlayer,
 } from "./Components";
+import { UserProvider } from "./context/UserContext";
+import MyThemeProvider from "./context/ThemeContext";
 
+// Modify App.jsx to include the UserProvider component
 function App() {
   return (
     <>
-      {/* <Clock></Clock>
-      <ClockDisplay></ClockDisplay> */}
-      {/* <ActivityFinder></ActivityFinder> */}
-      <BitcoinRates></BitcoinRates>
-      {/* <RefCounter></RefCounter>
-      <VideoPlayer></VideoPlayer> */}
-      {/* <ReducerCounter></ReducerCounter> */}
-      {/* <PostListReducer></PostListReducer> */}
-      {/* <SubscribeForm></SubscribeForm> */}
+      <UserProvider>
+        <MyThemeProvider>
+          {/* provider component is at top level */}
+          <ClockDisplay /> {/* so all children can use context data */}
+          {/* <MoviesList /> even if they have children of their own */}
+          <ActivityFinder />
+          <PostListReducer />
+          {/* logging in here can now set up current user everywhere */}
+          <LoginForm />
+        </MyThemeProvider>
+      </UserProvider>
     </>
   );
 }

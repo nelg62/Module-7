@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 // Renders a digital time that updates every second
 function Clock() {
   const [date, setDate] = useState(new Date());

@@ -6,6 +6,7 @@ import VideoPlayer from "./VideoPlayer";
 import ReducerCounter from "./ReducerCounter";
 import PostListReducer from "./PostListReducer";
 import SubscribeForm from "./SubscribeForm";
+import LoginForm from "./LoginForm";
 
 export {
   Clock,
@@ -17,4 +18,5 @@ export {
   ReducerCounter,
   PostListReducer,
   SubscribeForm,
+  LoginForm,
 };
