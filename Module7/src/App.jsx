@@ -31,13 +31,13 @@ function App() {
       <MyThemeProvider>
         <EmojiProvider>
           {/* Exercise 4 V */}
-          <Exercise4NavBar />
-          <Exercise4Routes />
+          {/* <Exercise4NavBar />
+          <Exercise4Routes /> */}
           {/* Exercise 4 ^ */}
 
-          {/* <NavBar></NavBar>
-        <AppRoutes />
-        <FooterPage /> */}
+          <NavBar></NavBar>
+          <AppRoutes />
+          <FooterPage />
         </EmojiProvider>
       </MyThemeProvider>
     </UserProvider>

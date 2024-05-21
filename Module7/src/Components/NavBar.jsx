@@ -23,7 +23,12 @@ export default function NavBar() {
         <li>
           <NavLink to="/Time">Time</NavLink>
         </li>
-        <li>{/* <NavLink to={"/Exercise4"}>Exercise4</NavLink> */}</li>
+        <li>
+          <NavLink to="/posts">Posts</NavLink>
+        </li>
+        <li>
+          <NavLink to="/login">Login</NavLink>
+        </li>
       </ul>
       {/* ++ Add another page with route and component */}
     </nav>
