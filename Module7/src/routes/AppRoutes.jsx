@@ -7,6 +7,7 @@ import {
   FooterPage,
   ClockDisplay,
   LoginForm,
+  MUIDisplayPage,
 } from "../Components";
 import { DashboardMessages, DashboardTasks } from "../pages/DashboardPage";
 import Exercise4Routes from "./Exercise4Routes";
@@ -48,6 +49,8 @@ function AppRoutes(props) {
 
       {/* special route to handle if none of the above match */}
       <Route path="*" element={<PageNotFound />} />
+
+      <Route path="/MUI" element={<MUIDisplayPage {...props} />} />
     </Routes>
   );
 }

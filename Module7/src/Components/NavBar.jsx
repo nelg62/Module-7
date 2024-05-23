@@ -29,6 +29,9 @@ export default function NavBar() {
         <li>
           <NavLink to="/login">Login</NavLink>
         </li>
+        <li>
+          <NavLink to="/MUI">MUI Display Page</NavLink>
+        </li>
       </ul>
       {/* ++ Add another page with route and component */}
     </nav>
